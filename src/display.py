@@ -8,5 +8,6 @@ class Display:
         return f"Display {self.id}: {self.message}"
 
     def update(self,data):
+        """Updates message displayed on display."""
         for key,value in data.items():
             self.message = value

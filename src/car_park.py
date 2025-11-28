@@ -20,6 +20,7 @@ class CarPark:
         return f"Car park at {self.location} with {self.capacity} bays"
 
     def register(self, component):
+        """Checks whether the object type is a sensor or a display and then adds it to the list of displays or sensors"""
         if isinstance(component, Display):
             self.displays.append(component)
         elif isinstance(component, Sensor):
@@ -28,16 +29,19 @@ class CarPark:
             raise TypeError("Object must be of type Display or Sensor")
 
     def add_car(self, plate : str):
+        """Adds the license plate to the list of license plates parked and updates displays."""
         self.plates.append(plate)
         self.update_displays()
         self.__log_car_activity(plate,"entered")
 
     def remove_car(self, plate : str):
+        """Removes the car license plate from the list of cars parked."""
         self.plates.remove(plate)
         self.update_displays()
         self.__log_car_activity(plate, "exited")
 
     def update_displays(self):
+        """Updates the display message of the display."""
         data = {"available_bays" : self.available_bays, "temperature" : 25}
         for display in self.displays:
             display.update(data)
