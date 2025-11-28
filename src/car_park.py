@@ -21,11 +21,23 @@ class CarPark:
         else:
             raise TypeError("Object must be of type Display or Sensor")
 
-    def add_car(self):
-        pass
+    def add_car(self, plate : str):
+        self.plates.append(plate)
+        self.update_displays()
 
-    def remove_car(self):
-        pass
+    def remove_car(self, plate : str):
+        self.plates.remove(plate)
+        self.update_displays()
 
     def update_displays(self):
-        pass
+        data = {"available_bays" : self.available_bays, "temperature" : 25}
+        for display in self.displays:
+            display.update(data)
+
+    @property
+    def available_bays(self):
+        available_bays = self.capacity - len(self.plates)
+        if available_bays < 0:
+            return 0
+        elif available_bays >= 0:
+            return available_bays
