@@ -1,15 +1,23 @@
 # North Metro Software Python Project Template
 
-A Python project template for all new projects in North Metro Software
+# Scenario
 
-You may use the guidelines under `org/` for assessments and projects in the IP4RIoT cluster.
+The City of Moondalup is progressively embracing smart city initiatives to enhance urban living, improve efficiency in city services, and promote sustainable practices. As part of this initiative, the city council is eager to transition to a smart parking solution to optimize carpark usage, reduce traffic congestion, and enhance the overall parking experience for residents and visitors.
+You have been contracted to create a prototype solution that uses sensors and displays to provide timely information about available parking bays as well as relevant information about weather and other community messages.
+The city’s Chief Technology Officer (CTO), has outlined the following requirements:
 
-## Additional Examples
-Here are other good examples of onboarding documents that relate to git and version control for you to browse:
+•	The system must accurately track and show availability of bays in real-time.
 
-- [skybase](https://handbook.skybase.com.np/git-conventions/)
-- [thoughtbot](https://github.com/thoughtbot/guides/tree/main/git) (also see their excellent [code review](https://github.com/thoughtbot/guides/tree/main/code-review) guide!)
-- [GitLab Handbook](https://handbook.gitlab.com/handbook/product-development-flow/)
+•	The displays must be able to show ambient temperature and arbitrary announcements.
 
-# Note
-When using this repo as a template, you should update this readme to provide a general overview suitable for **YOUR** project.
+•	The system must store the scanned license plates of cars.
+
+•	The system must work in uncontrolled car parks.
+
+•	The display must be updated promptly as cars enter or exit.
+
+•	The system should be robust, easy to maintain, and scalable for future enhancements.
+
+•	The application must follow best coding practices and include unit tests.
+
+•	You must use Git and GitHub for version management. 
