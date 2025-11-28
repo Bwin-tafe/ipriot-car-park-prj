@@ -3,7 +3,7 @@ from sensor import Sensor
 
 
 class CarPark:
-    def __init__(self, capacity = 100, plates = None, displays = None, location = "Unknown", ):
+    def __init__(self, location = "Unknown", capacity = 0, plates = None, displays = None ):
         self.location = location
         self.capacity = capacity
         self.plates = plates or []
